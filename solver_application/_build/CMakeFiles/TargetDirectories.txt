@@ -1,0 +1,4 @@
+/home/ace/Green-Ace/workspace/TimpLab3/lab03/solver_application/_build/CMakeFiles/solver.dir
+/home/ace/Green-Ace/workspace/TimpLab3/lab03/solver_application/_build/CMakeFiles/Solver.dir
+/home/ace/Green-Ace/workspace/TimpLab3/lab03/solver_application/_build/CMakeFiles/edit_cache.dir
+/home/ace/Green-Ace/workspace/TimpLab3/lab03/solver_application/_build/CMakeFiles/rebuild_cache.dir

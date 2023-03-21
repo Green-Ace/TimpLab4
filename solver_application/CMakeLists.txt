@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.10)
+project(solver)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+add_library(solver STATIC /home/ace/Green-Ace/workspace/TimpLab3/lab03/solver_lib/solver.cpp /home/ace/Green-Ace/workspace/TimpLab3/lab03/formatter_ex_lib/formatter_ex.cpp /home/ace/Green-Ace/workspace/TimpLab3/lab03/formatter_lib/formatter.cpp)
+include_directories(/home/ace/Green-Ace/workspace/TimpLab3/lab03/solver_lib /home/ace/Green-Ace/workspace/TimpLab3/lab03/formatter_ex_lib /home/ace/Green-Ace/workspace/TimpLab3/lab03/formatter_lib)
+add_executable(Solver /home/ace/Green-Ace/workspace/TimpLab3/lab03/solver_application/equation.cpp)
+target_link_libraries(Solver solver)

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsolver.a "CMakeFiles/solver.dir/home/ace/Green-Ace/workspace/TimpLab3/lab03/solver_lib/solver.cpp.o" "CMakeFiles/solver.dir/home/ace/Green-Ace/workspace/TimpLab3/lab03/formatter_ex_lib/formatter_ex.cpp.o" "CMakeFiles/solver.dir/home/ace/Green-Ace/workspace/TimpLab3/lab03/formatter_lib/formatter.cpp.o"
+/usr/bin/ranlib libsolver.a
