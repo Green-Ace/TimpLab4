@@ -24,6 +24,8 @@ git push origin main
 ![изображение](https://user-images.githubusercontent.com/112771063/226994991-e171f903-8994-4a3a-bc41-d95b443fb73c.png)
 
 
+
+
 name: Test Build
 on: [push]
 jobs:
@@ -37,7 +39,6 @@ jobs:
         - run: cd hello_world_application && cmake . -B _build && cd _build && make
         - run: cd solver_application && cmake . -B _build && cd _build && make
         - run: echo "This job's status is ${{ job.status }}."
-
     Test_clang:
         runs-on: ubuntu-latest
         steps:
@@ -48,6 +49,8 @@ jobs:
             - run: cd hello_world_application && cmake . -B _build -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_C_COMPILER=clang && cd _build && make
             - run: cd solver_application && cmake . -B _build -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_C_COMPILER=clang && cd _build && make
             - run: echo "This job's status is ${{ job.status }}."
+
+
 
 
 
