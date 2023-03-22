@@ -1,7 +1,9 @@
-cmake_minimum_required(VERSION 3.10)
-project(formatter_ex)
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-add_library(formatter_ex STATIC /home/ace/Green-Ace/workspace/TimpLab4/formatter_ex_lib/formatter_ex.cpp /home/ace/Green-Ace/workspace/TimpLab4/formatter_ex_lib/formatter_ex.h)
-include_directories(${CMAKE_CURRENT_SOURCE_DIR})/../formatter_lib)
-target_link_libraries(formatter_ex formatter)
+cmake_minimum_required(VERSION 3.16)
+set(CMAKE_CXX_STANDARD 17)
+project(formatter_ex_lib)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../formatter_lib)
+add_library(${PROJECT_NAME} STATIC
+${CMAKE_CURRENT_SOURCE_DIR}/formatter_ex.h
+${CMAKE_CURRENT_SOURCE_DIR}/formatter_ex.cpp
+)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../formatter_lib {CMAKE_CURRENT_SOURCE_DIR}/lib_build)

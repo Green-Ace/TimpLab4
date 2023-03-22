@@ -1,8 +1,21 @@
-cmake_minimum_required(VERSION 3.10)
-project(solver)
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-add_library(solver STATIC /home/ace/Green-Ace/workspace/TimpLab4/solver_lib/solver.cpp /home/ace/Green-Ace/workspace/TimpLab4/formatter_ex_lib/formatter_ex.cpp /home/ace/Green-Ace/workspace/TimpLab4/formatter_lib/formatter.cpp)
-include_directories(/home/ace/Green-Ace/workspace/TimpLab4/solver_lib /home/ace/Green-Ace/workspace/TimpLab4/formatter_ex_lib /home/ace/Green-Ace/workspace/TimpLab4/formatter_lib)
-add_executable(Solver /home/ace/Green-Ace/workspace/TimpLab4/solver_application/equation.cpp)
-target_link_libraries(Solver solver)
+cmake_minimum_required(VERSION 3.16)
+
+set(CMAKE_CXX_STANDARD 17)
+
+project(solver_app)
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../solver_lib)
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../formatter_ex_lib)
+
+add_executable(solver
+    equation.cpp
+)
+
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../solver_lib
+    {CMAKE_CURRENT_SOURCE_DIR}/lib_solver_build)
+
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../formatter_ex_lib
+    {CMAKE_CURRENT_SOURCE_DIR}/lib_formatter_build)
+
+target_link_libraries(solver PUBLIC formatter_ex_lib formatter_lib solver_lib)
