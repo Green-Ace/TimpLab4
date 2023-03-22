@@ -97,6 +97,6 @@ git push origin main
 
 
 
-
+[![Test](https://github.com/Green-Ace/TimpLab4/actions/workflows/test.yaml/badge.svg)](https://github.com/Green-Ace/TimpLab4/actions/workflows/test.yaml)
 
 
